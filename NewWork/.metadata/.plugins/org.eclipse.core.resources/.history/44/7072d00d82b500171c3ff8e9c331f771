@@ -1,8 +1,0 @@
-package exe;
-
-public class VentanaColor {
-
-	public VentanaColor() {
-		// TODO Auto-generated constructor stub
-	}
-}

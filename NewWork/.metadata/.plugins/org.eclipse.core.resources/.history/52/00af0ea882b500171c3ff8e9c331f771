@@ -1,7 +1,0 @@
-package exe;
-
-public class VentanaColor {
-
-	public VentanaColor() {	}
-	
-}
