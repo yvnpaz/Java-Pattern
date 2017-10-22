@@ -1,0 +1,24 @@
+package view;
+
+import java.util.Observer;
+
+import exe.ClaseObservador;
+import exe.VentanaColor;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		ClaseObservador observador = new ClaseObservador();
+		VentanaColor miVentanaColor = new VentanaColor(observador);
+		
+//		VentanaOpciones miVentanaOpciones = new VentanaOpciones(observador);
+//		VentanaSeleccion miVentanaSeleccion = new VentanaSeleccion(observador);
+
+		/** Aqui se Agregan los observadores */
+		observador.addObserver((Observer) miVentanaColor);
+//		observador.addObserver(miVentanaSeleccion);
+//		observador.addObserver(miVentanaOpciones);
+
+	}
+}

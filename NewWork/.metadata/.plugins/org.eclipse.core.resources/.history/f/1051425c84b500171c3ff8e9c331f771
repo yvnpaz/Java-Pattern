@@ -1,0 +1,46 @@
+package exe;
+
+import java.util.Observable;
+
+public class VentanaColor {
+
+	ClaseObservador miObservador;
+	private int colorSeleccionado;
+
+	public VentanaColor(ClaseObservador observer) {
+		this.miObservador = observer;
+	}
+
+	public String getColor() {
+		return colorSeleccionado;
+	}
+
+	public void setColor(String color) {
+		this.colorSeleccionado = color;
+	}
+
+	/**
+	 * Metodo de actualizar, comun para todos los metodos que implementen
+	 * observer
+	 */
+	public void update(Observable arg0, Object arg1) {
+
+		colorSeleccionado = miObservador.getColorSeleccionado();
+		switch (colorSeleccionado) {
+		case 1:
+			System.out.println("Seleccionado ROJO.");
+
+			break;
+		case 2:
+			System.out.println("Seleccionado AZUL.");
+			break;
+		case 3:
+			System.out.println("Seleccionado VERDE.");
+			break;
+		default:
+			System.out.println("Sin color.");
+		}
+
+	}
+
+}

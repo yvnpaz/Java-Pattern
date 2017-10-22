@@ -1,0 +1,7 @@
+package exe;
+
+import java.util.Observable;
+
+public class ClassObservador extends Observable {
+
+}

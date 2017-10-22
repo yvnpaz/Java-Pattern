@@ -1,0 +1,17 @@
+
+public class MyPatternDecorator {
+	
+	public static abstract class BasePizza {
+
+		protected double price;
+
+		public double getPrice() {
+			return price;
+		}
+	}
+	
+	public static void main(String[] args) {
+
+	}
+
+}

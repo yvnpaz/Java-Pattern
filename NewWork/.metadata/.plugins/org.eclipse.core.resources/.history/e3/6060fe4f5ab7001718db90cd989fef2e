@@ -1,0 +1,48 @@
+import java.util.Observable;
+
+import exe.ClaseObservador;
+import exe.VentanaColor;
+
+public class MyPatternObserver {
+
+	
+	public class ClaseObservador extends Observable {
+
+		private int colorSeleccionado;
+		private String color;
+		
+		public ClaseObservador() {}
+
+		public int getColorSeleccionado() {
+			return colorSeleccionado;
+		}
+
+		public void setColorSeleccionado(int colorSeleccionado) {
+			this.colorSeleccionado = colorSeleccionado;
+			setChanged();
+			notifyObservers();
+		}
+
+		public String getColor() {
+			return color;
+		}
+
+		public void setColor(String color) {
+			this.color = color;
+		}	
+		
+	}
+	
+	public static void main(String[] args) {
+
+		ClaseObservador observador = new ClaseObservador();
+		VentanaColor miVentanaColor = new VentanaColor(observador);
+
+		/** Aqui se Agregan los observadores */
+		observador.addObserver(miVentanaColor);
+
+		observador.setColorSeleccionado(2);
+//		miVentanaColor.update(observador, miVentanaColor);
+
+	}
+}

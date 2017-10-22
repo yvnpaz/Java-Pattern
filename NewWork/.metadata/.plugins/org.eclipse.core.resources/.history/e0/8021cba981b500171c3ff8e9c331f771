@@ -1,0 +1,16 @@
+package exe;
+
+import java.util.Observable;
+
+public class ClassObservador extends Observable {
+
+	private int colorSeleccionado;
+	private String color;
+	
+	public ClassObservador() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	
+}

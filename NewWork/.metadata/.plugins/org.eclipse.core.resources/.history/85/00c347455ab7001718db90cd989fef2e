@@ -1,0 +1,19 @@
+import exe.ClaseObservador;
+import exe.VentanaColor;
+
+public class MyPatternObserver {
+
+	
+	public static void main(String[] args) {
+
+		ClaseObservador observador = new ClaseObservador();
+		VentanaColor miVentanaColor = new VentanaColor(observador);
+
+		/** Aqui se Agregan los observadores */
+		observador.addObserver(miVentanaColor);
+
+		observador.setColorSeleccionado(2);
+//		miVentanaColor.update(observador, miVentanaColor);
+
+	}
+}

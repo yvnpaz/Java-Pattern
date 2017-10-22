@@ -1,0 +1,10 @@
+package exe;
+
+public class VentanaColor {
+
+	private String color;
+	
+	public VentanaColor() {	}
+	
+	
+}
